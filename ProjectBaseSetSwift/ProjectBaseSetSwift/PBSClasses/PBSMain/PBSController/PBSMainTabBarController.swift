@@ -12,22 +12,22 @@ class PBSMainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor=UIColor.whiteColor()
+        self.view.backgroundColor=UIColor.white;
         //添加所有控制器
+        print(" //添加所有控制器")
        addChildviewControllers()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        [self .setupComposeBtn()];
-        
+        self.setupComposeBtn()
     }
     
-    func  composeBtnClick(bt:UIButton){
+
+    func  composeBtnClick(_ bt:UIButton){
         let discoverVc=PBSDiscoverViewController()
         let nav=PBSMainNavigationController(rootViewController: discoverVc)
-        presentViewController(nav, animated: true, completion: nil)
-
+        present(nav, animated: true, completion: nil)
     }
     
     //添加加号按钮
@@ -36,32 +36,32 @@ class PBSMainTabBarController: UITabBarController {
         tabBar.addSubview(composeBtn)
         
         // 2.调整加号按钮的位置
-        let width = UIScreen.mainScreen().bounds.size.width / CGFloat(viewControllers!.count)
+        let width = UIScreen.main.bounds.size.width / CGFloat(viewControllers!.count)
         let rect  = CGRect(x: 0, y: 0, width: width, height: 49)
         // 第一个参数:是frame的大小
         // 第二个参数:是x方向偏移的大小
         // 第三个参数: 是y方向偏移的大小
-        composeBtn.frame = CGRectOffset(rect, 2 * width, 0)
+        composeBtn.frame = rect.offsetBy(dx: 2 * width, dy: 0)
     }
     
     
 
     private func addChildviewControllers(){
-        addChildViewController("PBSHomeViewController", title: "首页", imageName: "tabbar_home")
-        addChildViewController("PBSAlbumViewController", title: "相册", imageName: "tabbar_message_center")
+        addChildViewController(childControllerName: "PBSHomeViewController", title: "首页", imageName: "tabbar_home")
+        addChildViewController(childControllerName: "PBSAlbumViewController", title: "相册", imageName: "tabbar_message_center")
         // 再添加一个占位控制器
-        addChildViewController("NullViewController", title: "", imageName: "")
+        addChildViewController(childControllerName: "NullViewController", title: "", imageName: "")
         
         
-        addChildViewController("PBSMessageViewController", title: "消息", imageName: "tabbar_discover")
-        addChildViewController("PBSMineViewController", title: "我", imageName: "tabbar_profile")
+        addChildViewController(childControllerName: "PBSMessageViewController", title: "消息", imageName: "tabbar_discover")
+        addChildViewController(childControllerName: "PBSMineViewController", title: "我", imageName: "tabbar_profile")
     }
     
     /**
      初始化子类控制器
      */
     private func addChildViewController(childControllerName: String, title:     String, imageName :String){
-        let ns = NSBundle.mainBundle().infoDictionary!["CFBundleExecutable"] as! String
+        let ns = Bundle.main.infoDictionary!["CFBundleExecutable"] as! String
         print(ns)
         // 将字符串转化为类，默认情况下命名空间就是项目名称，但是命名空间可以修改
         
@@ -89,12 +89,16 @@ class PBSMainTabBarController: UITabBarController {
     private lazy var composeBtn:UIButton = {
         let btn = UIButton()
         //设置前景图片
-        btn.setImage(UIImage(named:"tabbar_compose_icon_add"), forState: UIControlState.Normal)
-        btn.setImage(UIImage(named:"tabbar_compose_icon_add_highlighted"), forState: UIControlState.Highlighted)
+        btn.setImage(UIImage(named:"tabbar_compose_icon_add"), for: .normal)
+     
+        btn.setImage(UIImage(named:"tabbar_compose_icon_add_highlighted"), for: .highlighted)
         
-        btn.setBackgroundImage(UIImage(named:"tabbar_compose_button"), forState: UIControlState.Normal)
-        btn.setBackgroundImage(UIImage(named:"tabbar_compose_button_highlighted"), forState: UIControlState.Highlighted)
-        btn.addTarget(self, action:#selector(composeBtnClick(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        btn.setBackgroundImage(UIImage(named:"tabbar_compose_button"), for: .normal)
+        btn.setBackgroundImage(UIImage(named:"tabbar_compose_button_highlighted"), for: .highlighted)
+       // btn.addTarget(self, action:#selector(composeBtnClick(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+     
+        btn.addTarget(self, action:#selector(composeBtnClick(_:)), for:.touchUpInside)
+        
         return btn
     }()
     
