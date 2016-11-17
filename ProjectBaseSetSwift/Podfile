@@ -1,0 +1,13 @@
+platform :ios, ‘8.0’
+
+use_frameworks!
+
+
+target ‘ProjectBaseSetSwift’ do
+
+
+pod 'Alamofire', '~> 3.5.0'
+
+pod 'SwiftyJSON', '~> 2.3.2'
+
+end

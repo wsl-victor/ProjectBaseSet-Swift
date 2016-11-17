@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		5773901A1D77DF5D0078C5F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577390191D77DF5D0078C5F6 /* AppDelegate.swift */; };
 		577390211D77DF5D0078C5F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577390201D77DF5D0078C5F6 /* Assets.xcassets */; };
-		5773902F1D77DF5D0078C5F6 /* ProjectBaseSetSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773902E1D77DF5D0078C5F6 /* ProjectBaseSetSwiftTests.swift */; };
-		5773903A1D77DF5D0078C5F6 /* ProjectBaseSetSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577390391D77DF5D0078C5F6 /* ProjectBaseSetSwiftUITests.swift */; };
 		577390751D77E90B0078C5F6 /* PBSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773904A1D77E90B0078C5F6 /* PBSLoginViewController.swift */; };
 		577390761D77E90B0078C5F6 /* PBSRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5773904B1D77E90B0078C5F6 /* PBSRegisterViewController.swift */; };
 		577390771D77E90B0078C5F6 /* PBSAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577390501D77E90B0078C5F6 /* PBSAlbumViewController.swift */; };
@@ -42,17 +40,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		578BDB7E1DC1F5F100E534E9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		577390161D77DF5D0078C5F6 /* ProjectBaseSetSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectBaseSetSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		577390191D77DF5D0078C5F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		577390201D77DF5D0078C5F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		577390251D77DF5D0078C5F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5773902A1D77DF5D0078C5F6 /* ProjectBaseSetSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectBaseSetSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5773902E1D77DF5D0078C5F6 /* ProjectBaseSetSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectBaseSetSwiftTests.swift; sourceTree = "<group>"; };
-		577390301D77DF5D0078C5F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		577390351D77DF5D0078C5F6 /* ProjectBaseSetSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectBaseSetSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		577390391D77DF5D0078C5F6 /* ProjectBaseSetSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectBaseSetSwiftUITests.swift; sourceTree = "<group>"; };
-		5773903B1D77DF5D0078C5F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5773904A1D77E90B0078C5F6 /* PBSLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBSLoginViewController.swift; sourceTree = "<group>"; };
 		5773904B1D77E90B0078C5F6 /* PBSRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBSRegisterViewController.swift; sourceTree = "<group>"; };
 		577390501D77E90B0078C5F6 /* PBSAlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBSAlbumViewController.swift; sourceTree = "<group>"; };
@@ -96,8 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				577390181D77DF5D0078C5F6 /* ProjectBaseSetSwift */,
-				5773902D1D77DF5D0078C5F6 /* ProjectBaseSetSwiftTests */,
-				577390381D77DF5D0078C5F6 /* ProjectBaseSetSwiftUITests */,
 				577390171D77DF5D0078C5F6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -122,24 +127,6 @@
 				577390251D77DF5D0078C5F6 /* Info.plist */,
 			);
 			path = ProjectBaseSetSwift;
-			sourceTree = "<group>";
-		};
-		5773902D1D77DF5D0078C5F6 /* ProjectBaseSetSwiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				5773902E1D77DF5D0078C5F6 /* ProjectBaseSetSwiftTests.swift */,
-				577390301D77DF5D0078C5F6 /* Info.plist */,
-			);
-			path = ProjectBaseSetSwiftTests;
-			sourceTree = "<group>";
-		};
-		577390381D77DF5D0078C5F6 /* ProjectBaseSetSwiftUITests */ = {
-			isa = PBXGroup;
-			children = (
-				577390391D77DF5D0078C5F6 /* ProjectBaseSetSwiftUITests.swift */,
-				5773903B1D77DF5D0078C5F6 /* Info.plist */,
-			);
-			path = ProjectBaseSetSwiftUITests;
 			sourceTree = "<group>";
 		};
 		577390471D77E90B0078C5F6 /* PBSClasses */ = {
@@ -434,6 +421,7 @@
 				577390121D77DF5D0078C5F6 /* Sources */,
 				577390131D77DF5D0078C5F6 /* Frameworks */,
 				577390141D77DF5D0078C5F6 /* Resources */,
+				578BDB7E1DC1F5F100E534E9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -576,7 +564,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5773902F1D77DF5D0078C5F6 /* ProjectBaseSetSwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,7 +571,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5773903A1D77DF5D0078C5F6 /* ProjectBaseSetSwiftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
